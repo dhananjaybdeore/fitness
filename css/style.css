@@ -364,36 +364,302 @@ header .right-side-menu .sub-menu a:hover {
 #section-five .right-side div {
   margin-bottom: 3rem;
 }
-.fa-heart{
-    color: var(--primary-button-background);
+.fa-heart {
+  color: var(--primary-button-background);
 }
 
 /* ---------our sixth section footer css style starts here-------- */
-footer{
+footer {
+  width: 100%;
+  background: var(--background-color);
+  height: auto;
+  padding: 5rem 10rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+footer img {
+  width: 13rem;
+  height: 5rem;
+}
+footer .footer-menu {
+  /* margin-top: 2rem; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+footer div h4 {
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+footer div a {
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+}
+.footer-div5 a {
+  font-size: 1.3rem;
+}
+
+/* -----------------responsive website layout----------- */
+/* laptop view */
+@media (max-width: 1280px) {
+  header,
+  .main-hero-section,
+  .common-section {
+    padding: 0 10rem;
+  }
+  html {
+    font-size: 50%;
+  }
+}
+
+/* --------------for tablet view------------------- */
+@media (max-width: 980px) {
+  header,
+  .main-hero-section,
+  .common-section {
+    padding: 0 9rem;
+  }
+
+  .main-hero-section .hero-right-side {
     width: 100%;
-    background: var(--background-color);
+    position: relative;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-hero-section .hero-right-side img {
+    width: 60rem;
+    height: 60rem;
+    /* margin-top: -4rem; */
+    margin-top: 5rem;
+  }
+
+  .right-side{
+      margin-left: 0;
+      display: none;
+  }
+  .common-section {
+
+    width: 100%;
     height: auto;
-    padding: 5rem 10rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-footer img{
-    width: 13rem;
-    height: 5rem;
-}
-footer .footer-menu{
-    /* margin-top: 2rem; */
+    justify-items: center;
+    grid-template-columns: 1fr;
+  }
+  .common-section .left-side img {
+      /* display: n; */
+    height: 50rem;
+    margin-left: 5rem;
+    /* width: 35rem; */
+  }
+  .common-section .right-side {
+    margin-top: 6rem;
+    justify-content: start;
+    height: auto;
+  }
+  .common-section .right-side h2 {
+    font-size: 4rem;
+    width: 30rem;
+  }
+  #section-two .left-side{
+      width: 30rem;
+      margin: 0;
+      padding:0;
+      margin-left: -35rem;
+  }
+  .section-third {
+    padding: 1rem 1rem;
+    width: auto;
+
+    height: auto;
+  }
+  .section-third h2 {
+    width: auto;
+    font-size: 4rem;
+    line-height: 6rem;
+  }
+  .section-third .section-third-task {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+  .task-2 {
+    margin: 5rem 0rem;
+  }
+  /* section four style */
+  #section-four {
+      /* display: none; */
+    margin-left: 0rem;
+    margin-right: 0rem;
 }
-footer div h4{
+  #section-four .right-side {
+    width: auto;
+    margin-left: 0rem;
+    order: 2;
+  }
+  #section-four .right-side h2{
+      width: 40rem;
+
+  }
+  #section-four .left-side  {
+width: 30rem;
+  }
+
+  #section-four .left-side img {
+
+      height: 40rem;
+      width: 30rem;
+      margin-left: -15rem;
+  }
+
+  /* section five style */
+  #section-five {
+
+    margin-left: 0rem;
+    margin-right: 0rem;
+    /* padding-right: 0rem; */
+}
+  #section-five .right-side {
+    width: 40rem;
+    margin-left: -25rem;
+    order: 2;
+
+  }
+  #section-five .right-side h2{
+      width: 40rem;
+
+  }
+  #section-five .right-side h3{
+      line-height: 3rem;
+      width: 30rem;
+  }
+
+  #section-five .left-side img {
+
+      height: 40rem;
+      width: 40rem;
+  }
+
+  .common-section .right-side{
+      margin: 0;
+      /* display: none; */
+      width: 40rem;
+      margin-right: 15rem;
+  }
+  /* .common-section .left-side{
+      width: 10rem;
+  } */
+  .common-section .left-side img {
+      width: 40rem;
+  }
+  footer{
+      margin: 0;
+      padding:3rem 5rem;
+      width: 100%;
+      display: grid;
+      grid-template-columns: none;
+  }
+  
+  footer .footer-menu{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  footer .footer-menu h4{
+      font-size: 2rem;
+  }
+}
+
+/* ------------for mobile view------------ */
+@media (max-width: 768px) {
+  header,
+  .main-hero-section,
+  .common-section {
+    padding: 0 5rem;
+  }
+  header nav {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+  }
+  header nav .sub-menu a {
+    margin-right: 0;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+  }
+  header nav .left-side-menu {
+    width: 100%;
+    display: block;
+    order: 2;
+  }
+  header nav .left-side-menu img {
+    display: block;
+    width: 100%;
+  }
+  header nav .left-side-menu .sub-menu a {
+    width: 100%;
+    display: block;
+  }
+  header nav .left-side-menu .sub-menu a li {
     font-size: 2rem;
-    text-transform: capitalize;
-}
-footer div a{
-    font-size: 1.7rem;
-    line-height: 2.5rem;
-}
-.footer-div5 a{
-    font-size: 1.3rem;
+  }
+  header nav .right-side-menu {
+    width: 100%;
+  }
+  header nav .right-side-menu .sub-menu {
+    width: 100%;
+    order: 1;
+    /* padding-right: 0; */
+    /* display: flex;
+
+    align-items: flex-end; */
+  }
+  header nav .right-side-menu .sub-menu a {
+    width: 10rem;
+    height: 4rem;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  header nav .right-side-menu .sub-menu a li {
+    font-size: 0rem;
+  }
+
+  /* hero section css style */
+  .main-hero-section {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-flow: column;
+  }
+  .main-hero-section .hero-left-side {
+    order: 2;
+    width: 100%;
+  }
+  .main-hero-section .hero-left-side h1 {
+    width: 45rem;
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+  .main-hero-section .hero-left-side p {
+    width: 45rem;
+    font-size: 2rem;
+    margin-bottom: 02rem;
+  }
+
+  .main-hero-section .hero-right-side {
+    order: 1;
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: transparent;
+  }
+  .main-hero-section .hero-right-side img {
+    width: 35rem;
+    height: 35rem;
+    margin-top: 0rem;
+  }
 }
